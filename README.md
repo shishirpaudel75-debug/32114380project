@@ -14,11 +14,11 @@ The aim of this project is to analyse machine learning methods used in hospital 
 
 The main objectives of this project are:
 
-1. To review machine learning techniques used in hospital waste classification.
-2. To evaluate the strengths and weaknesses of existing machine learning approaches.
-3. To identify technical, operational, ethical, and regulatory challenges.
-4. To develop a simulation-based machine learning workflow.
-5. To propose a conceptual framework for implementing ML-based hospital waste classification in NHS settings.
+- To review machine learning techniques used in hospital waste classification.
+- To evaluate the strengths and weaknesses of existing machine learning approaches.
+- To identify technical, operational, ethical, and regulatory challenges.
+- To develop a simulation-based machine learning workflow.
+- To propose a conceptual framework for implementing ML-based hospital waste classification in NHS settings.
 
 ## Repository Contents
 
@@ -38,27 +38,27 @@ The dataset uses 64-dimensional synthetic feature vectors to represent CNN-style
 
 The simulation includes eight HTM 07-01-related waste categories:
 
-1. Infectious waste
-2. Cytotoxic waste
-3. Pharmaceutical waste
-4. Sharps waste
-5. Chemical waste
-6. Offensive waste
-7. Anatomical waste
-8. General non-hazardous waste
+- Infectious waste
+- Cytotoxic waste
+- Pharmaceutical waste
+- Sharps waste
+- Chemical waste
+- Offensive waste
+- Anatomical waste
+- General non-hazardous waste
 
 ## Machine Learning Models
 
 Three machine learning models are tested in the notebook:
 
-1. Random Forest classifier  
-   - Used to simulate an EfficientNet-B0 / CNN-style feature classification approach.
+1. **Random Forest classifier**  
+   Used to simulate an EfficientNet-B0 / CNN-style feature classification approach.
 
-2. Support Vector Machine (SVM)  
-   - Used as a classical machine learning classifier on CNN-style features.
+2. **Support Vector Machine (SVM)**  
+   Used as a classical machine learning classifier on CNN-style features.
 
-3. Logistic Regression  
-   - Used as a simple baseline classifier.
+3. **Logistic Regression**  
+   Used as a simple baseline classifier.
 
 ## Evaluation Metrics
 
@@ -79,13 +79,13 @@ The models are evaluated using:
 
 ## Key Results
 
-The simulation achieved strong classification results. The simulated EfficientNet-B0 approach achieved approximately:
+The simulation achieved strong classification results on the synthetic feature-vector dataset. The simulated EfficientNet-B0 approach achieved approximately:
 
-- Test accuracy: 92.66%
-- Weighted F1-score: 0.9228
-- Mean ROC-AUC: 0.9977
+- Test accuracy: **99.53%**
+- Weighted F1-score: **0.9952**
+- Mean ROC-AUC: **1.0000**
 
-The results suggest that machine learning can be useful for hospital waste classification, but further work would be required using real hospital waste image datasets before practical NHS deployment.
+The SVM and Logistic Regression models achieved **100% accuracy** on the synthetic feature set. These high results should be interpreted as simulation-based performance rather than proof of direct NHS deployment readiness. Further work would be required using real hospital waste image datasets before practical NHS deployment.
 
 ## Limitations
 
@@ -93,6 +93,7 @@ This project has some important limitations:
 
 - The dataset is synthetic and does not use real hospital waste images.
 - The simulation represents CNN-style feature vectors rather than training a full deep learning image model.
+- The high classification scores are partly due to the controlled structure of the synthetic feature space.
 - Real-world factors such as lighting, camera angle, background noise, object occlusion, and hospital workflow differences are not fully captured.
 - The system has not been tested in a live hospital environment.
 - The implementation is a simulation/proof-of-concept rather than a deployed software system.
@@ -133,7 +134,7 @@ The notebook produces:
 - ROC curve analysis
 - PCA feature-space visualisation
 - Simulated explainability outputs
-- Results used in the final project report
+- Results and figures used in the final project report
 
 ## Final Report
 
